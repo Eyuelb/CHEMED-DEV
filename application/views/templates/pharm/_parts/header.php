@@ -13,11 +13,10 @@
         <meta property="og:image" content="<?= isset($image) && !is_null($image) ? $image : base_url('assets/img/site-overview.png') ?>" />
         <title><?= $title ?></title>
         <link rel="icon" type="image/png" sizes="192x192" href="<?= base_url('assets/imgs/ch-logo.jpeg') ?>" />
-        <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:300,400,700%7CMontserrat:300,400,500,600,700,800,900" rel="stylesheet">
+ 
 
 
 <script src="<?= base_url('assets/form-validator/jquery.form-validator.js') ?>"></script>
-<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:300,400,700%7CMontserrat:300,400,500,600,700,800,900" rel="stylesheet">
 <link rel="stylesheet" href="<?= base_url('assets/new/plugins/font-awesome/css/font-awesome.min.css') ?>" />
 <link rel="stylesheet" href="<?= base_url('assets/new/plugins/ps-icon/style.css') ?>" />
 <link rel="stylesheet" href="<?= base_url('assets/new/plugins/bootstrap/dist/css/bootstrap.min.css') ?>" />
@@ -39,6 +38,12 @@
     $.validate();
   });
 </script>
+<?php if ($cookieLaw != false) { ?>
+            <script type="text/javascript">
+                window.cookieconsent_options = {"message": "<?= $cookieLaw['message'] ?>", "dismiss": "<?= $cookieLaw['button_text'] ?>", "learnMore": "<?= $cookieLaw['learn_more'] ?>", "link": "<?= $cookieLaw['link'] ?>", "theme": "<?= $cookieLaw['theme'] ?>"};
+            </script>
+            <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+        <?php } ?>
 <body class="ps-loading">
     <div class="header--sidebar"></div>
     <header class="header">
@@ -48,7 +53,15 @@
                 <div class="col-lg-6 col-md-8 col-sm-6 col-xs-12 ">
                 </div>
                 <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 ">
-                  <div class="header__actions"><a href="#">Login & Regiser</a>
+                  <div class="header__actions">
+                  
+                  <?php if (isset($_SESSION['logged_user'])) { ?>
+                      <a href="<?= LANG_URL . '/myaccount' ?>">My Account</a>
+                      <a href="<?= LANG_URL . '/logout' ?>">LOG OUT</a>
+                  <?php } else { ?>
+                    <a href="<?= LANG_URL . '/login' ?>">Login & Regiser</a>
+                  <?php } ?>
+
                     <div class="btn-group ps-dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ETB<i class="fa fa-angle-down"></i></a>
                       <ul class="dropdown-menu">
                         <li><a href="#"><img src="images/flag/usa.svg" alt=""> ETB</a></li>
@@ -108,12 +121,12 @@
             <div class="ps-cart"><a class="ps-cart__toggle" href="<?= LANG_URL . '/shopping-cart' ?>"><span><i><?= is_numeric($cartItems) && (int)$cartItems == 0 ? 0 : $sumOfItems ?></i></span><i class="ps-icon-shopping-cart" ></i></a>
 
             </div>
-            <div class="menu-toggle" style="    background-color: #1e1e7b;"><span></span></div>
+            <div class="menu-toggle" style="background-color: #1e1e7b;"><span></span></div>
           </div>
         </div>
       </nav>
     </header>
-    <div class="header-services" style="    background-color: #1e1e7b;height: 3px;">
+    <div class="header-services" style="background-color: #1e1e7b;height: 3px;">
     
         <p class="ps-service"><i class="ps-icon-delivery"></i><strong>               </strong></p>
 

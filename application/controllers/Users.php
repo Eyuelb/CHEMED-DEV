@@ -28,7 +28,7 @@ class Users extends MY_Controller
                 $_SESSION['logged_user'] = $result; //id of user
                 redirect(LANG_URL . '/checkout');
             } else {
-                $this->session->set_flashdata('userError', lang('wrong_user'));
+                $this->session->set_flashdata('userError', 'Wrong Email or Password');
             }
         }
         $head = array();

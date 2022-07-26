@@ -46,6 +46,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             
                             
                         </form>
+                        <?php if ($this->session->flashdata('userError')) {
+                        ?>
+
+                    <?php
+                            foreach ($this->session->flashdata('userError') as $error) { ?>
+                           <div class="col-xs-12 txt-c text-danger" translate=""><?php echo $error . '<br>'; ?></div>
+                               <?php } ?>
+                               </h5>
+                               <?php } ?>
                     </div>
                 </div> 
                 <div class="col-md-6">
@@ -53,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="box"><header>CHEMED</header>
                             
                             <p>Create Your account and Track Your order</p>
-                            <img width="300" height="150" src="banner-tracking.png" alt="tracking banner" class="width-85 mt-lg mb-lg entered lazyloaded">
+                             <img width="300" height="150" src="<?= base_url('assets/new/css/banner-tracking.png') ?>" alt="tracking banner" class="width-85 mt-lg mb-lg entered lazyloaded">
                             </div>
                                 
                     </div>

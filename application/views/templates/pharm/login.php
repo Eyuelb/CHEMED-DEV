@@ -8,6 +8,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="container">
     <div class="con_login">
         <div class="myCard">
+            
+
             <div class="row">
                 <div class="col-md-6">
                     <div class="myLeftCtn"> 
@@ -28,6 +30,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <input type="submit" name="login" class="butt login loginmodal-submit" value="LOGIN">
                             
                         </form>
+                        <?php if ($this->session->flashdata('userError')) {
+                        ?>
+                    <div class="col-xs-12 txt-c text-danger" translate="">Email or Password incorrect, Please try again</div>
+        <?php } ?>
                         <div  class="centered col-md-12 col-xs-12 font-14 mt-3" style="color: #969696;">
                         <span>New to CheMed?</span>
                         <a style="margin-left: 7px; color: #745be7;" href="<?= LANG_URL . '/register' ?>">Sign Up Now</a></div>

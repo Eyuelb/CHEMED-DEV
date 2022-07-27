@@ -25,8 +25,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="wizard">
                 <nav class="list-group list-group-flush active">
-                    <a class="list-group-item active" href="user.php"><i class="fe-icon-shopping-bag mr-1 text-muted"></i>Orders List</a>
-                    <a class="list-group-item " href="user my account.php"><i class="fe-icon-user text-muted"></i>Profile Settings</a>
+                    <a class="list-group-item active" href="<?= LANG_URL . '/myaccount' ?>"><i class="fe-icon-shopping-bag mr-1 text-muted"></i>Orders List</a>
+                    <a class="list-group-item " href="<?= LANG_URL . '/myaccount_update' ?>"><i class="fe-icon-user text-muted"></i>Profile Settings</a>
                 </nav>
             </div>
         </div>

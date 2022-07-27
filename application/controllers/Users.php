@@ -80,7 +80,27 @@ class Users extends MY_Controller
         $data['links_pagination'] = pagination('myaccount', $rowscount, $this->num_rows, 2);
         $this->render('user', $head, $data);
     }
-
+    public function myaccount_update($page = 0)
+    {
+        if (isset($_POST['update'])) {
+            $_POST['id'] = $_SESSION['logged_user'];
+            $count_emails = $this->Public_model->countPublicUsersWithEmail($_POST['email'], $_POST['id']);
+            if ($count_emails == 0) {
+                $this->Public_model->updateProfile($_POST);
+            }
+            redirect(LANG_URL . '/myaccount_update');
+        }
+        $head = array();
+        $data = array();
+        $head['title'] = lang('my_acc');
+        $head['description'] = lang('my_acc');
+        $head['keywords'] = str_replace(" ", ",", $head['title']);
+        $data['userInfo'] = $this->Public_model->getUserProfileInfo($_SESSION['logged_user']);
+        $rowscount = $this->Public_model->getUserOrdersHistoryCount($_SESSION['logged_user']);
+        $data['orders_history'] = $this->Public_model->getUserOrdersHistory($_SESSION['logged_user'], $this->num_rows, $page);
+        $data['links_pagination'] = pagination('myaccount_update', $rowscount, $this->num_rows, 2);
+        $this->render('user_update', $head, $data);
+    }
     public function logout()
     {
         unset($_SESSION['logged_user']);

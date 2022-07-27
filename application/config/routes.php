@@ -123,6 +123,11 @@ $route['myaccount/(:num)'] = "Users/myaccount/$1";
 $route['(\w{2})/myaccount'] = "Users/myaccount";
 $route['(\w{2})/myaccount/(:num)'] = "Users/myaccount/$2";
 
+$route['myaccount_update'] = "Users/myaccount_update";
+$route['myaccount_update/(:num)'] = "Users/myaccount_update/$1";
+$route['(\w{2})/myaccount_update'] = "Users/myaccount_update";
+$route['(\w{2})/myaccount_update/(:num)'] = "myaccount_update/$2";
+
 // Logout Profiles Public Users Page
 $route['logout'] = "Users/logout";
 $route['(\w{2})/logout'] = "Users/logout";

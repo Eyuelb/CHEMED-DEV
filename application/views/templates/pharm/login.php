@@ -15,12 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="myLeftCtn"> 
                         <form class="myForm text-center" method="POST" action="">
                             <header>Login to your account</header>
-                            <div class="form-group">
-                            <?php if ($this->session->flashdata('userError')) {
-                        ?>
-                    <div class="col-xs-12 txt-c text-danger" style="font-weight: 700;">Email or Password incorrect, Please try again</div>
-        <?php } ?>
-                            </div>
+
                             <div class="form-group">
                                 <i class="fas fa-envelope"></i>
                                 <input class="myInput" placeholder="Email" name="email" type="text" id="email" required> 
@@ -35,7 +30,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <input type="submit" name="login" class="butt login loginmodal-submit" value="LOGIN">
                             
                         </form>
-          
+                        <?php if ($this->session->flashdata('userError')) {
+                        ?>
+                    <div class="col-xs-12 txt-c text-danger" translate="">Email or Password incorrect, Please try again</div>
+        <?php } ?>
                         <div  class="centered col-md-12 col-xs-12 font-14 mt-3" style="color: #969696;">
                         <span>New to CheMed?</span>
                         <a style="margin-left: 7px; color: #745be7;" href="<?= LANG_URL . '/register' ?>">Sign Up Now</a></div>

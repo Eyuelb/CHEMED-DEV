@@ -221,7 +221,7 @@ $route['admin/titles'] = "admin/settings/titles";
 $route['admin/pages'] = "admin/settings/pages";
 $route['admin/emails'] = "admin/settings/emails";
 
-$route['admin/emails/(:num)'] = "admin/settings/emails/index/$1";
+$route['admin/emails'] = "admin/settings/emails";
 $route['admin/history'] = "admin/settings/history";
 $route['admin/history/(:num)'] = "admin/settings/history/index/$1";
 // ADVANCED SETTINGS

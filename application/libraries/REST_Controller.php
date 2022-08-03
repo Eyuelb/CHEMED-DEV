@@ -2339,4 +2339,104 @@ abstract class REST_Controller extends MX_Controller {
             exit;
         }
     }
+    
+function Validation($msg)
+{
+    $class ='';
+if($msg != '')
+{
+    $class = 'alert alert-danger';
+}
+  echo "
+  <!DOCTYPE html>
+  <html lang='en'>
+    <head>
+      <meta charset='utf-8'>
+      <meta name='viewport' content='width=device-width, initial-scale=1'>
+      <title>Simple Bootstrap Login Form Example</title>
+      <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+<style>
+.back {
+  background: #e2e2e2;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.div-center {
+  width: 400px;
+  height: 400px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  padding: 1em 2em;
+  border-bottom: 2px solid #ccc;
+  display: table;
+}
+
+div.content {
+  display: table-cell;
+  vertical-align: middle;
+}
+</style>
+    </head>
+    <body>
+    <div class='back'>
+
+
+  <div class='div-center'>
+
+
+    <div class='content'>
+
+    <div class='$class' >
+    $msg
+  </div>
+      <h3>Api-key access</h3>
+      <hr />
+        <div class='form-group'>
+            <div class='input-group mb-3'>
+                <div class='input-group-prepend'>
+                <span class='input-group-text' id='basic-addon1'>Apikey</span>
+              </div>
+              <input type='text' class='form-control' placeholder='Api Key' aria-label='Api-Key' name='valueKey' id='valueKey' aria-describedby='basic-addon1'>
+              </div>
+        </div>
+
+        <button class='btn btn-primary'onclick= aut()>Login</button>
+    </div>
+
+
+    </span>
+  </div>
+    </body>
+    <script>
+    function aut(){
+    let key = document.getElementById('valueKey').value;
+    let url = 'http://localhost/CHEMED-DEV/api/products/get/';
+    if(key.length != 0){
+        window.location.href = url+key;
+        
+    }
+    else
+    {
+    let key = '111';
+    let url = 'http://localhost/CHEMED-DEV/api/products/get/';
+            window.location.href = url+key;
+    }
+    }
+    </script>
+
+  </html>
+  ";
+}
+    
 }

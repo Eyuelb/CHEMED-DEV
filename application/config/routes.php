@@ -243,10 +243,12 @@ $route['admin/loadOthersImages'] = "admin/ecommerce/publish/loadOthersImages";
   | Sample REST API Routes
   | -------------------------------------------------------------------------
  */
-$route['api/products/allget'] = 'Api/Products/a_get';
-$route['api/product/(\w{2})/(:num)/get'] = 'Api/Products/one/$1/$2';
-$route['api/product/set'] = 'Api/Products/set';
-$route['api/product/(\w{2})/delete'] = 'Api/Products/productDel/$1';
 
+/*$route['api/products/get'] = 'Api/Products/all';*/
+$route['api/products/getdata'] = 'Api/Products/aut';
+$route['api/products/users'] = 'Api/Products/users';
+$route['api/products/get/(:any)'] = 'Api/Products/one/$1';
+$route['api/products/set'] = 'Api/Products/set';
+$route['api/products/(\w{2})/delete'] = 'Api/Products/productDel/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

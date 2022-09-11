@@ -1,5 +1,5 @@
-<script src="<?= base_url('assets/ckeditor/ckeditor.js') ?>"></script>
-<h1><img src="<?= base_url('assets/imgs/shop-cart-add-icon.png') ?>" class="header-img" style="margin-top:-3px;"> Publish product</h1>
+<script src="<?= base_url('assets/admin/ckeditor/ckeditor.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
+<h1><img src="<?= base_url('assets/admin/imgs/shop-cart-add-icon.png') ?>" class="header-img" style="margin-top:-3px;"> Publish product</h1>
 <hr>
 <?php
 $timeNow = time();
@@ -171,7 +171,7 @@ if ($this->session->flashdata('result_publish')) {
             <div class="modal-footer">
                 <button type="button" class="btn btn-default finish-upload">
                     <span class="finish-text">Finish</span>
-                    <img src="<?= base_url('assets/imgs/load.gif') ?>" class="loadUploadOthers" alt="">
+                    <img src="<?= base_url('assets/admin/imgs/load.gif') ?>" class="loadUploadOthers" alt="">
                 </button>
             </div>
         </div>

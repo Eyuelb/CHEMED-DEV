@@ -1,4 +1,4 @@
-<script src="<?= base_url('assets/ckeditor/ckeditor.js') ?>"></script>
+<script src="<?= base_url('assets/ckeditor/ckeditor.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
 <h1><img src="<?= base_url('assets/imgs/blogger.png') ?>" class="header-img" style="margin-top:-2px;"> Publish post</h1>
 <hr>
 <div class="row">

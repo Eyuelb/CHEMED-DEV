@@ -1,6 +1,6 @@
-<link href="<?= base_url('assets/css/bootstrap-toggle.min.css') ?>" rel="stylesheet">
+<link href="<?= base_url('assets/admin/css/bootstrap-toggle.min.css').'?'.date('l jS \of F Y h:i:s A') ?>" rel="stylesheet">
 <div>
-    <h1><img src="<?= base_url('assets/imgs/orders.png') ?>" class="header-img" style="margin-top:-2px;"> Orders <?= isset($_GET['settings']) ? ' / Settings' : '' ?></h1>
+    <h1><img src="<?= base_url('assets/admin/imgs/orders.png') ?>" class="header-img" style="margin-top:-2px;"> Orders <?= isset($_GET['settings']) ? ' / Settings' : '' ?></h1>
     <?php if (!isset($_GET['settings'])) { ?>
         <a href="?settings" class="pull-right orders-settings"><i class="fa fa-cog" aria-hidden="true"></i> <span>Settings</span></a>
     <?php } else { ?>
@@ -52,7 +52,7 @@ if (!isset($_GET['settings'])) {
                                 # <?= $tr['order_id'] ?>
                                 <?php if ($tr['viewed'] == 0) { ?>
                                     <div id="new-order-alert-<?= $tr['id'] ?>">
-                                        <img src="<?= base_url('assets/imgs/new-blinking.gif') ?>" style="width:100px;" alt="blinking">
+                                        <img src="<?= base_url('assets/admin/imgs/new-blinking.gif') ?>" style="width:100px;" alt="blinking">
                                     </div>
                                 <?php } ?>
                                 <div class="confirm-result">
@@ -83,6 +83,7 @@ if (!isset($_GET['settings'])) {
                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
                                 </a>
                             </td>
+                            
                             <td class="hidden" id="order-id-<?= $tr['order_id'] ?>">
                                 <div class="table-responsive">
                                     <table class="table more-info-purchase">
@@ -313,5 +314,5 @@ if (isset($_GET['settings'])) {
         </div>
     </div>
 </div>
-<script src="<?= base_url('assets/js/bootstrap-toggle.min.js') ?>"></script>
-<script src="<?= base_url('assets/js/mine_admin.js') ?>"></script>
+<script src="<?= base_url('assets/admin/js/bootstrap-toggle.min.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
+<script src="<?= base_url('assets/admin/js/mine_admin.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>

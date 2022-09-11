@@ -61,7 +61,7 @@ if ( ! function_exists('form_open'))
 	 * @param	array	a key/value pair hidden data
 	 * @return	string
 	 */
-	function form_open($action = '', $attributes = array(), $hidden = array())
+	function form_open($action = '', $class = '', $attributes = array(), $hidden = array())
 	{
 		$CI =& get_instance();
 
@@ -78,6 +78,10 @@ if ( ! function_exists('form_open'))
 
 		$attributes = _attributes_to_string($attributes);
 
+		if ( ! $class)
+		{
+			$attributes .= ' class="'.$class.'" ';
+		}
 		if (stripos($attributes, 'method=') === FALSE)
 		{
 			$attributes .= ' method="post"';
@@ -88,7 +92,7 @@ if ( ! function_exists('form_open'))
 			$attributes .= ' accept-charset="'.strtolower(config_item('charset')).'"';
 		}
 
-		$form = '<form action="'.$action.'"'.$attributes.">\n";
+		$form = '<form class="form" action="'.$action.'"'.$attributes.">\n";
 
 		if (is_array($hidden))
 		{
@@ -151,7 +155,7 @@ if ( ! function_exists('form_open_multipart'))
 	 * @param	array	a key/value pair hidden data
 	 * @return	string
 	 */
-	function form_open_multipart($action = '', $attributes = array(), $hidden = array())
+	function form_open_multipart($action = '',$class = '', $attributes = array(), $hidden = array())
 	{
 		if (is_string($attributes))
 		{
@@ -162,7 +166,7 @@ if ( ! function_exists('form_open_multipart'))
 			$attributes['enctype'] = 'multipart/form-data';
 		}
 
-		return form_open($action, $attributes, $hidden);
+		return form_open($action,$class, $attributes, $hidden);
 	}
 }
 

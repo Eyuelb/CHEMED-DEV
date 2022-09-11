@@ -219,6 +219,7 @@ class CI_Migration {
 		{
 			$method = 'up';
 		}
+		
 		elseif ($target_version < $current_version)
 		{
 			$method = 'down';

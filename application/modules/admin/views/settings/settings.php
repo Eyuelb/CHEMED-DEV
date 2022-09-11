@@ -1,6 +1,6 @@
-<link href="<?= base_url('assets/css/bootstrap-toggle.min.css') ?>" rel="stylesheet">
-<script src="<?= base_url('assets/ckeditor/ckeditor.js') ?>"></script>
-<h1><img src="<?= base_url('assets/imgs/settings-page.png') ?>" class="header-img" style="margin-top:-3px;">Settings</h1>
+<link href="<?= base_url('assets/admin/css/bootstrap-toggle.min.css').'?'.date('l jS \of F Y h:i:s A') ?>" rel="stylesheet">
+<script src="<?= base_url('assets/admin/ckeditor/ckeditor.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
+<h1><img src="<?= base_url('assets/admin/imgs/settings-page.png') ?>" class="header-img" style="margin-top:-3px;">Settings</h1>
 <hr>
 <div class="row">
     <div class="col-sm-6 col-md-4">
@@ -452,8 +452,8 @@
                             <?php foreach ($law_themes as $theme) { ?>
                                 <div class="col-sm-6">
                                     <a href="javascript:void(0);" class="select-law-theme" data-law-theme="<?= str_replace('.png', '', $theme) ?>">
-                                        <img src="<?= base_url('assets/imgs/cookie-law-themes/' . $theme) ?>" class="img-responsive theme" alt="<?= $theme ?>">
-                                        <img src="<?= base_url('assets/imgs/ok-themes.png') ?>" <?=
+                                        <img src="<?= base_url('assets/admin/imgs/cookie-law-themes/' . $theme) ?>" class="img-responsive theme" alt="<?= $theme ?>">
+                                        <img src="<?= base_url('assets/admin/imgs/ok-themes.png') ?>" <?=
                                         isset($cookieLawInfo['cookieInfo']['theme']) &&
                                         $cookieLawInfo['cookieInfo']['theme'] == str_replace('.png', '', $theme) ? 'style="display:block;"' : ''
                                         ?> class="ok" alt="CHOOSED">
@@ -487,4 +487,4 @@
         </div>
     </div>
 </div>
-<script src="<?= base_url('assets/js/bootstrap-toggle.min.js') ?>"></script>
+<script src="<?= base_url('assets/admin/js/bootstrap-toggle.min.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>

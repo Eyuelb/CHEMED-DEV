@@ -1,4 +1,4 @@
-<script src="<?= base_url('assets/ckeditor/ckeditor.js') ?>"></script>
+<script src="<?= base_url('assets/admin/ckeditor/ckeditor.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
 <div class="row">
     <div class="col-sm-8">
         <form method="POST" action="">

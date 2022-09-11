@@ -1,7 +1,7 @@
-<script src="<?= base_url('assets/highcharts/highcharts.js') ?>"></script>
-<script src="<?= base_url('assets/highcharts/data.js') ?>"></script>
-<script src="<?= base_url('assets/highcharts/drilldown.js') ?>"></script>
-<h1><img src="<?= base_url('assets/imgs/admin-home.png') ?>" class="header-img" style="margin-top:-3px;"> Home</h1>
+<script src="<?= base_url('assets/admin/highcharts/highcharts.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
+<script src="<?= base_url('assets/admin/highcharts/data.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
+<script src="<?= base_url('assets/admin/highcharts/drilldown.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
+<h1><img src="<?= base_url('assets/admin/imgs/admin-home.png') ?>" class="header-img" style="margin-top:-3px;"> Home</h1>
 <hr>
 <div class="home-page">
     <div class="row">
@@ -349,7 +349,7 @@
 <?php foreach ($ordersByMonth['years'] as $year) { ?>
                 {
                 name: '<?= $year ?>',
-                        data: [<?= implode(',', $ordersByMonth['orders'][$year]) ?>]
+                data: [<?= implode(',', $ordersByMonth['orders'][$year]) ?>]
                 },
 <?php } ?>
             ]

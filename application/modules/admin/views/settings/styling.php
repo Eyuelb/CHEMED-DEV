@@ -1,9 +1,9 @@
-<script src="<?= base_url('assets/js/jquery-ui.min.js') ?>"></script>
-<link href="<?= base_url('assets/css-gradient-generator/src/css-gradient-generator.css') ?>" rel="stylesheet" type="text/css" media="all">
-<link href="<?= base_url('assets/css-gradient-generator/resources/icomoon/sprites.css') ?>" rel="stylesheet" type="text/css">
-<link href="<?= base_url('assets/css-gradient-generator/resources/bootstrap-colorpickersliders/bootstrap.colorpickersliders.css') ?>" rel="stylesheet" type="text/css" media="all">
+<script src="<?= base_url('assets/admin/js/jquery-ui.min.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
+<link href="<?= base_url('assets/admin/css-gradient-generator/src/css-gradient-generator.css').'?'.date('l jS \of F Y h:i:s A') ?>" rel="stylesheet" type="text/css" media="all">
+<link href="<?= base_url('assets/admin/css-gradient-generator/resources/icomoon/sprites.css').'?'.date('l jS \of F Y h:i:s A') ?>" rel="stylesheet" type="text/css">
+<link href="<?= base_url('assets/admin/css-gradient-generator/resources/bootstrap-colorpickersliders/bootstrap.colorpickersliders.css').'?'.date('l jS \of F Y h:i:s A') ?>" rel="stylesheet" type="text/css" media="all">
 
-<h1><img src="<?= base_url('assets/imgs/pages-styling.png') ?>" class="header-img" style="margin-top:-3px;">Styling</h1>
+<h1><img src="<?= base_url('assets/admin/imgs/pages-styling.png') ?>" class="header-img" style="margin-top:-3px;">Styling</h1>
 <hr>
 <div class="alert alert-info">
     <b>Follow the steps:</b><br>
@@ -22,7 +22,7 @@
                     <a href="#" class="btn btn-default css-gradient-editor-configuration" data-toggle="modal" data-target="#configmodal"><span class="pngicon-wrench"></span> Config</a>
                     <a href="" class="btn btn-default css-gradient-editor-permalink"><span class="pngicon-share"></span> Share permalink</a>
                     <a href="#" class="btn btn-default css-gradient-editor-qrcode" title="Gradient permalink QR code" data-toggle="modal" data-target="#qrmodal"><span class="pngicon-qrcode"></span> QR Code</a>
-                    <a target="_blank" href="<?= base_url('assets/css-gradient-generator/gradient.php') ?>" class="btn btn-default css-gradient-editor-imagegradient" style="margin-right:10px"><span class="pngicon-picture"></span> Get PNG</a>
+                    <a target="_blank" href="<?= base_url('assets/admin/css-gradient-generator/gradient.php') ?>" class="btn btn-default css-gradient-editor-imagegradient" style="margin-right:10px"><span class="pngicon-picture"></span> Get PNG</a>
                     <button type="button" class="btn btn-primary css-gradient-editor-getcss" data-toggle="modal" data-target="#cssoutmodal" style="margin-right:10px"><span class="pngicon-file-css"></span> Get CSS</button>
                     <button type="button" class="btn css-gradient-editor-undo"><span class="pngicon-undo"></span> Undo</button>
                     <button type="button" class="btn css-gradient-editor-redo"><span class="pngicon-redo"></span> Redo</button>
@@ -450,12 +450,12 @@
     </div>
 </div>
 
-<script src="<?= base_url('assets/css-gradient-generator/resources/bootstrap-touchspin/bootstrap.touchspin.js') ?>"></script>
-<script src="<?= base_url('assets/css-gradient-generator/resources/tinycolor/tinycolor.js') ?>"></script>
-<script src="<?= base_url('assets/css-gradient-generator/resources/bootstrap-colorpickersliders/bootstrap.colorpickersliders.js') ?>"></script>
-<script src="<?= base_url('assets/css-gradient-generator/src/css-gradient-generator.js') ?>"></script>
-<script src="<?= base_url('assets/css-gradient-generator/resources/jquery.base64/jquery.base64.min.js') ?>"></script>
-<script src="<?= base_url('assets/css-gradient-generator/resources/qrcode/qrcode.min.js') ?>"></script>
+<script src="<?= base_url('assets/admin/css-gradient-generator/resources/bootstrap-touchspin/bootstrap.touchspin.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
+<script src="<?= base_url('assets/admin/css-gradient-generator/resources/tinycolor/tinycolor.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
+<script src="<?= base_url('assets/admin/css-gradient-generator/resources/bootstrap-colorpickersliders/bootstrap.colorpickersliders.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
+<script src="<?= base_url('assets/admin/css-gradient-generator/src/css-gradient-generator.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
+<script src="<?= base_url('assets/admin/css-gradient-generator/resources/jquery.base64/jquery.base64.min.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
+<script src="<?= base_url('assets/admin/css-gradient-generator/resources/qrcode/qrcode.min.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
 <script>
     var ge = new CSSGradientEditor($('.css-gradient-editor-container'));
     function increase_brightness(hex, percent) {

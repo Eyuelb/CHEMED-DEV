@@ -1,6 +1,6 @@
-<link href="<?= base_url('assets/css/bootstrap-toggle.min.css') ?>" rel="stylesheet">
-<link href="<?= base_url('assets/css/bootstrap-datepicker.min.css') ?>" rel="stylesheet">
-<h1><img src="<?= base_url('assets/imgs/discount.png') ?>" class="header-img" style="margin-top:-3px;"> Discount Codes</h1>
+<link href="<?= base_url('assets/admin/css/bootstrap-toggle.min.css').'?'.date('l jS \of F Y h:i:s A') ?>" rel="stylesheet">
+<link href="<?= base_url('assets/admin/css/bootstrap-datepicker.min.css').'?'.date('l jS \of F Y h:i:s A') ?>" rel="stylesheet">
+<h1><img src="<?= base_url('assets/admin/imgs/discount.png') ?>" class="header-img" style="margin-top:-3px;"> Discount Codes</h1>
 <hr>
 <div style="margin-bottom: 20px;">
     <a href="javascript:void(0);" data-toggle="modal" data-target="#addDiscountCode" class="btn btn-primary pull-left">
@@ -117,8 +117,8 @@
         </div>
     </div>
 </div>
-<script src="<?= base_url('assets/js/bootstrap-datepicker.min.js') ?>"></script>
-<script src="<?= base_url('assets/js/bootstrap-toggle.min.js') ?>"></script>
+<script src="<?= base_url('assets/admin/js/bootstrap-datepicker.min.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
+<script src="<?= base_url('assets/admin/js/bootstrap-toggle.min.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
 <script>
                         $(document).ready(function () {
                             $('[data-toggle="tooltip"]').tooltip();

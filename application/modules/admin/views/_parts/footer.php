@@ -86,12 +86,12 @@
         </div>
     </div>
 </div>
-<script src="<?= base_url('assets/bootstrap-select-1.12.1/js/bootstrap-select.min.js') ?>"></script>
-<script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>
-<script src="<?= base_url('assets/js/bootbox.min.js') ?>"></script>
-<script src="<?= base_url('assets/js/zxcvbn.js') ?>"></script>
-<script src="<?= base_url('assets/js/zxcvbn_bootstrap3.js') ?>"></script>
-<script src="<?= base_url('assets/js/pGenerator.jquery.js') ?>"></script>
+<script src="<?= base_url('assets/admin/js/bootstrap-select-1.12.1/js/bootstrap-select.min.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
+<script src="<?= base_url('assets/admin/js/bootstrap.min.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
+<script src="<?= base_url('assets/admin/js/bootbox.min.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
+<script src="<?= base_url('assets/admin/js/zxcvbn.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
+<script src="<?= base_url('assets/admin/js/zxcvbn_bootstrap3.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
+<script src="<?= base_url('assets/admin/js/pGenerator.jquery.js').'?'.date('l jS \of F Y h:i:s A') ?>"></script>
 <script>
     var urls = {
         changePass: '<?= base_url('admin/changePass') ?>',
